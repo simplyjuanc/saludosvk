@@ -1,6 +1,6 @@
 {
-  "name": "GreetingSlack",
-  "description": "This app connects to your slack team and greets new joiners with a custom msg",
+  "name": "Saludos VK",
+  "description": "Esta app se conecta a su espacio de Slack y permite enviar un mensaje de bienvenida.",
   "keywords": [
     "productivity",
     "Slack",
@@ -11,7 +11,7 @@
   "env": {
     "SLACK_TOKEN": {
       "description": "Your Slack API Token",
-      "value": "1234-12314123123-123123123",
+      "value": "xoxb-856186706640-924450518087-XtHibVypSHMD4qf0eAbLcNzN",
       "required": "true"
     },
     "UNFURL_LINKS": {
@@ -19,8 +19,8 @@
       "value": "true"
     },
     "WELCOME_MESSAGE": {
-      "description": "Your Welcome message string",
-      "value": "A personalized welcome msg that is broadcasted to your Slack Users"
+      "description": "Mensaje de bienvenida",
+      "value": "Hola! ¡Bienvenido(a) a la comunidad Vásquez Kennedy!\nPara empezar a explorar Slack, puede comunicarse directamente con las personas a través de los 'canales' que se encuentran en el menú izquierdo. Si lo desea, puede también buscar o crear nuevos canales ahí mismo, o comunicarse por mensaje directos con otros usuarios.\n¿Por qué no aprovecha para presentarse en el canal #general, donde se encuentran también los demás miembros de la comunidad?\nNuevamente, ¡bienvenido(a)!"
     }
   }
 }
