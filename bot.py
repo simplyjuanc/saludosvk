@@ -35,7 +35,7 @@ def is_team_join(msg):
 def is_debug_channel_join(msg):
     return msg['type'] == "member_joined_channel" and msg['channel'] == DEBUG_CHANNEL_ID and msg['channel_type'] == 'C'
 
-def is_direct_message(msg): 
+def is_direct_message(msg):
     print msg
     is_bot = False
     if 'bot_id' in msg:
@@ -85,7 +85,7 @@ def parse_join(message):
 
         # Need to get the display name from the user_id
         real_name = get_display_name(user_id)
-				
+
         #logging.DEBUG('SENDING MESSAGE: '+user_message+' TO USER '+real_name)
         # Need to send a message to a channel
         requests.get("https://slack.com/api/chat.postMessage?token="+CHANNEL_TOKEN+"&channel="+RESPONSE_CHANNEL+"&text="+user_message+"&as_user=false&username="+real_name)
