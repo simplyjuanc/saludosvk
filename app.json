@@ -1,6 +1,6 @@
 {
-  "name": "GreetingSlack",
-  "description": "This app connects to your slack team and greets new joiners with a custom msg",
+  "name": "Saludos VK",
+  "description": "Esta app se conecta a su espacio de Slack y permite enviar un mensaje de bienvenida.",
   "keywords": [
     "productivity",
     "Slack",
