@@ -14,25 +14,17 @@ logging.basicConfig(level=logging.DEBUG,
 # Suppress InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-###VARIABLES THAT YOU NEED TO SET MANUALLY IF NOT ON HEROKU#####
+# VARIABLES THAT YOU NEED TO SET MANUALLY IF NOT ON HEROKU#####
 try:
     MESSAGE = os.environ.get('WELCOME_MESSAGE')
     TOKEN = os.environ.get('SLACK_TOKEN')
     CHANNEL_TOKEN = os.environ.get('CHANNEL_TOKEN')
     UNFURL = os.environ.get('UNFURL_LINKS')
-<<<<<<< Updated upstream
-	RESPONSE_CHANNEL = os.environ.get('RESPONSE_CHANNEL')
-    DEBUG_CHANNEL_ID = os.environ.get('DEBUG_CHANNEL_ID', False)
-except:
-    MESSAGE = 'Manually set the Message if youre not running through heroku or have not set vars in ENV'
-    TOKEN = 'Manually set the API Token if youre not running through heroku or have not set vars in ENV'
-=======
     RESPONSE_CHANNEL = os.environ.get('RESPONSE_CHANNEL')
     DEBUG_CHANNEL_ID = os.environ.get('DEBUG_CHANNEL_ID', False)
 except:
     MESSAGE = 'Hola! ¡Bienvenido(a) a la comunidad Vásquez Kennedy!\nPara empezar a explorar Slack, puede comunicarse directamente con las personas a través de los 'canales' que se encuentran en el menú izquierdo. Si lo desea, puede también buscar o crear nuevos canales ahí mismo, o comunicarse por mensaje directos con otros usuarios.\n¿Por qué no aprovecha para presentarse en el canal #general, donde se encuentran también los demás miembros de la comunidad?\nNuevamente, ¡bienvenido(a)!'
-    TOKEN = 'xoxb-856186706640-924450518087-XtHibVypSHMD4qf0eAbLcNzN'
->>>>>>> Stashed changes
+    TOKEN = 'API TOKEN'
     UNFURL = 'FALSE'
 ###############################################################
 
@@ -44,10 +36,7 @@ def is_team_join(msg):
 def is_debug_channel_join(msg):
     return msg['type'] == "member_joined_channel" and msg['channel'] == DEBUG_CHANNEL_ID and msg['channel_type'] == 'C'
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 def is_direct_message(msg):
     print msg
     is_bot = False
@@ -105,11 +94,7 @@ def parse_join(message):
         # Need to get the display name from the user_id
         real_name = get_display_name(user_id)
 
-<<<<<<< Updated upstream
         # Logging.DEBUG('SENDING MESSAGE: '+user_message+' TO USER '+real_name)
-=======
-        #logging.DEBUG('SENDING MESSAGE: '+user_message+' TO USER '+real_name)
->>>>>>> Stashed changes
         # Need to send a message to a channel
         requests.get("https://slack.com/api/chat.postMessage?token="+CHANNEL_TOKEN+"&channel=" +
                      RESPONSE_CHANNEL+"&text="+user_message+"&as_user=false&username="+real_name)
@@ -119,12 +104,7 @@ def parse_join(message):
 
 def start_rtm():
 
-<<<<<<< Updated upstream
     r = requests.get("https://slack.com/api/rtm.start?token="+TOKEN, verify=False)
-=======
-    r = requests.get(
-        "https://slack.com/api/rtm.start?token="+TOKEN, verify=False)
->>>>>>> Stashed changes
     r = r.json()
     logging.info(r)
     r = r["url"]
