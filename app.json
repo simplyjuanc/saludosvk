@@ -6,8 +6,8 @@
     "Slack",
     "bot"
   ],
-  "website": "https://github.com/orliesaurus/greetingslack",
-  "repository": "https://github.com/orliesaurus/greetingslack",
+  "website": "https://github.com/simplyjuanc/saludosvk",
+  "repository": "https://github.com/simplyjuanc/saludosvk",
   "env": {
     "SLACK_TOKEN": {
       "description": "Your Slack API Token",
@@ -15,7 +15,7 @@
       "required": "true"
     },
     "UNFURL_LINKS": {
-      "description": "We UNFURL only the last link by default, trust me its good",
+      "description": "We UNFURL only the last link by default, trust me it's good",
       "value": "true"
     },
     "WELCOME_MESSAGE": {
