@@ -104,7 +104,7 @@ def parse_join(message):
 
 def start_rtm():
 
-    r = requests.get("https://slack.com/api/rtm.start?token="+TOKEN, verify=False)
+    r = requests.get("https://slack.com/api/rtm.connect?token="+TOKEN, verify=False)
     r = r.json()
     logging.info(r)
     r = r["url"]
