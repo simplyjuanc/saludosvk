@@ -23,7 +23,7 @@ try:
     RESPONSE_CHANNEL = os.environ.get('RESPONSE_CHANNEL')
     DEBUG_CHANNEL_ID = os.environ.get('DEBUG_CHANNEL_ID', False)
 except:
-    MESSAGE = 'Hola! ¡Bienvenido(a) a la comunidad Vásquez Kennedy!\nPara empezar a explorar Slack, puede comunicarse directamente con las personas a través de los 'canales' que se encuentran en el menú izquierdo. Si lo desea, puede también buscar o crear nuevos canales ahí mismo, o comunicarse por mensaje directos con otros usuarios.\n¿Por qué no aprovecha para presentarse en el canal #general, donde se encuentran también los demás miembros de la comunidad?\nNuevamente, ¡bienvenido(a)!'
+    MESSAGE = 'Hola! ¡Bienvenido(a) a la comunidad Vásquez Kennedy!\nPara empezar a explorar Slack, puede comunicarse directamente con las personas a través de los \'canales\' que se encuentran en el menú izquierdo. Si lo desea, puede también buscar o crear nuevos canales ahí mismo, o comunicarse por mensaje directos con otros usuarios.\n¿Por qué no aprovecha para presentarse en el canal #general, donde se encuentran también los demás miembros de la comunidad?\nNuevamente, ¡bienvenido(a)!'
     TOKEN = 'API TOKEN'
     UNFURL = 'FALSE'
 ###############################################################
@@ -38,7 +38,7 @@ def is_debug_channel_join(msg):
 
 
 def is_direct_message(msg):
-    print msg
+    print(msg)
     is_bot = False
     if 'bot_id' in msg:
         is_bot = True
